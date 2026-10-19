@@ -1,0 +1,46 @@
+{
+  "name": "HealthMetric",
+  "type": "object",
+  "properties": {
+    "heart_rate": {
+      "type": "number",
+      "description": "Heart rate in BPM"
+    },
+    "blood_pressure_systolic": {
+      "type": "number"
+    },
+    "blood_pressure_diastolic": {
+      "type": "number"
+    },
+    "steps": {
+      "type": "number",
+      "default": 0
+    },
+    "calories_burned": {
+      "type": "number",
+      "default": 0
+    },
+    "sleep_hours": {
+      "type": "number"
+    },
+    "hydration_ml": {
+      "type": "number",
+      "default": 0
+    },
+    "ecg_data": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "description": "ECG waveform data points"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "heart_rate",
+    "recorded_at"
+  ]
+}

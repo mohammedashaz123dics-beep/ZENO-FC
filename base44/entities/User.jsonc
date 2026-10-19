@@ -1,0 +1,49 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "subscription_plan": {
+      "type": "string",
+      "enum": [
+        "free",
+        "sporty",
+        "peak"
+      ],
+      "default": "free",
+      "description": "User's active subscription plan"
+    },
+    "subscription_billing": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "yearly"
+      ],
+      "description": "Billing cycle for the subscription"
+    },
+    "subscription_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "cancelled",
+        "expired"
+      ],
+      "default": "active",
+      "description": "Current status of the subscription"
+    },
+    "subscription_started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the current subscription was activated"
+    },
+    "predictions_today": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of AI predictions made today (for free plan limit)"
+    },
+    "last_prediction_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last prediction (for daily reset)"
+    }
+  }
+}

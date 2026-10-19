@@ -1,0 +1,74 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "team_home": {
+      "type": "string",
+      "description": "Home team name"
+    },
+    "team_away": {
+      "type": "string",
+      "description": "Away team name"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "football",
+        "basketball",
+        "soccer",
+        "baseball",
+        "hockey",
+        "cricket"
+      ],
+      "description": "Sport type"
+    },
+    "match_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Match date and time"
+    },
+    "stadium": {
+      "type": "string",
+      "description": "Stadium name"
+    },
+    "stadium_lat": {
+      "type": "number",
+      "description": "Stadium latitude"
+    },
+    "stadium_lng": {
+      "type": "number",
+      "description": "Stadium longitude"
+    },
+    "home_score": {
+      "type": "number",
+      "default": 0
+    },
+    "away_score": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "live",
+        "finished"
+      ],
+      "default": "upcoming"
+    },
+    "prediction": {
+      "type": "string",
+      "description": "AI prediction result"
+    },
+    "prediction_confidence": {
+      "type": "number",
+      "description": "Prediction confidence percentage"
+    }
+  },
+  "required": [
+    "team_home",
+    "team_away",
+    "sport",
+    "match_date"
+  ]
+}
